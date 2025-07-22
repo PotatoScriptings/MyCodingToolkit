@@ -1,7 +1,5 @@
 -- Delete variables if they already exist in the context, they are only here to ensure the context is complete.
 local Players = game:GetService("Players")
-
--- PlayerData table
 local PlayerData = {}
 
 -- Function creates player data when a player joins
