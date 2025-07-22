@@ -22,6 +22,14 @@ local CoreModule = require(Modules:WaitForChild("CoreModule"))
 -- Add more modules as needed
 
 -- Variables --
+local Player = Players.LocalPlayer
+local PlayerGui = Player:WaitForChild("PlayerGui")
+local PlayerScripts = Player:WaitForChild("PlayerScripts")
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local Backpack = Player:WaitForChild("Backpack")
+local Root = Character:WaitForChild("HumanoidRootPart")
+local Humanoid = Character:WaitForChild("Humanoid")
+local Mouse = Player:GetMouse()
 local Camera = workspace.CurrentCamera
 -- Add more variables as needed
 
@@ -33,6 +41,6 @@ local CURRENT_CORE_NAME = "ServerScriptTemplate"
 local CurrentCore = CoreModule[CURRENT_CORE_NAME]
 
 -- If the current core is not enabled, exit the script
-if not CurrentCore.Enabled or not CurrentCore["Server"].Enabled then
+if not CurrentCore.Enabled or not CurrentCore["Client"].Enabled then
     return
 end
