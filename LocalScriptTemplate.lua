@@ -18,6 +18,7 @@ local TS = game:GetService("TweenService")
 local Modules = RS:WaitForChild("Modules")
 local InfoModules = Modules:WaitForChild("InfoModules")
 local UtilityModules = Modules:WaitForChild("UtilityModules")
+local FrameWorkModules = Modules:WaitForChild("FrameworkModules")
 local CoreModule = require(Modules:WaitForChild("CoreModule"))
 -- Add more modules as needed in alphabetical order
 
