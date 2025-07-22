@@ -19,7 +19,7 @@ local Modules = RS:WaitForChild("Modules")
 local InfoModules = Modules:WaitForChild("InfoModules")
 local UtilityModules = Modules:WaitForChild("UtilityModules")
 local CoreModule = require(Modules:WaitForChild("CoreModule"))
--- Add more modules as needed
+-- Add more modules as needed in alphabetical order
 
 -- Variables --
 local Player = Players.LocalPlayer
