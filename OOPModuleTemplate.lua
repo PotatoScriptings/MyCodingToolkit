@@ -16,6 +16,11 @@ ClassTemplate["DateCreated"] = "DD/MM/YYYY"
 
 ClassTemplate.__index = ClassTemplate
 
+-- Methods (this is a placeholder, change as needed)
+function ClassTemplate:DoSomething()
+    print("Doing something in " .. self.Name)
+end
+
 -- Function that creates a new class (Identifier can be changed to match your project)
 function ClassTemplate.new(Identifier)
     -- Creates a new metatable for the new class
