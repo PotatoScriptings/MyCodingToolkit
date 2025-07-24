@@ -29,3 +29,5 @@ CoreModule["StructureTemplate"] = {
         -- Add more server specific settings here
     },
 }
+
+return CoreModule

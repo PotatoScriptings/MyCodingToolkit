@@ -17,3 +17,5 @@ module["InfoTemplate"] = {
         -- OtherSubSetting = "Insert name here",
     -- }
 }
+
+return module

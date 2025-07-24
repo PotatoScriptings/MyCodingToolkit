@@ -36,3 +36,5 @@ function ClassTemplate.new(Identifier)
 
     return NewClass
 end
+
+return ClassTemplate
