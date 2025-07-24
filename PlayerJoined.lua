@@ -5,10 +5,15 @@ local PlayerData = require(script:WaitForChild("PlayerData")) -- This module wil
 
 -- This function calls when player character loads
 local function onCharacterAdded(character)
-    -- Assign the character to the player data
+    -- Variables
     local player = Players:GetPlayerFromCharacter(character)
-    if player and PlayerData[player] then
-        PlayerData[player].Character = character
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    local Root = character:FindFirstChild("HumanoidRootPart")
+    local playerData = PlayerData[player.UserId]
+
+    -- Assign the character to the player data
+    if player and playerData then
+        playerData.Character = character
     end
 
     -- Additional setup can be done here
