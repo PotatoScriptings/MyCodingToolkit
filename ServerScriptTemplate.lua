@@ -24,6 +24,11 @@ local CoreModule = require(Modules:WaitForChild("CoreModule"))
 
 -- Variables --
 local Camera = workspace.CurrentCamera
+local Events = RS:WaitForChild("Events")
+local Animations = RS:WaitForChild("Animations")
+local Models = RS:WaitForChild("Models")
+local Sounds = RS:WaitForChild("Sounds")
+local VFX = RS:WaitForChild("VFX")
 -- Add more variables as needed
 
 -- Constants --
