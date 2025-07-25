@@ -35,7 +35,7 @@ local Camera = workspace.CurrentCamera
 -- Add more variables as needed
 
 -- Constants --
-local CURRENT_CORE_NAME = "ServerScriptTemplate"
+local CURRENT_CORE_NAME = "ServerScriptTemplate" -- The name of the current core module
 -- Add more constants as needed
 
 -- Core Info --
