@@ -32,6 +32,7 @@ local Root = Character:WaitForChild("HumanoidRootPart")
 local Humanoid = Character:WaitForChild("Humanoid")
 local Mouse = Player:GetMouse()
 local Camera = workspace.CurrentCamera
+local Events = RS:WaitForChild("Events")
 -- Add more variables as needed
 
 -- Constants --
