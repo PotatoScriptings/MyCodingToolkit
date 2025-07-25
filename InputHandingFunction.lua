@@ -40,7 +40,7 @@ local function handleInputEnded(input, gameProcessedEvent)
     local KeyBinds = DoSomethingInfo.Client.Keybinds
 
     -- Example for handling input ended
-    if input.KeyCode == KeyBinds.DoSomething.KeyCode and not KeyBinds.DoSomething.Toggle then
+    if input.KeyCode == KeyBinds.DoSomething.KeyCode and KeyBinds.DoSomething.Toggle == false then
         -- Stop doing something if it's a hold action
         if PlayerData.IsDoingSomething then
             Events.DoSomething:FireServer(false)
