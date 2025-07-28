@@ -22,7 +22,7 @@ function ClassTemplate:DoSomething()
 end
 
 -- Function that creates a new class (Identifier can be changed to match your project)
-function ClassTemplate.new(Identifier)
+function Classes.new(Identifier)
     -- Creates a new metatable for the new class
     local NewClass = {}
     setmetatable(NewClass, ClassTemplate)
@@ -37,4 +37,4 @@ function ClassTemplate.new(Identifier)
     return NewClass
 end
 
-return ClassTemplate
+return Classes
