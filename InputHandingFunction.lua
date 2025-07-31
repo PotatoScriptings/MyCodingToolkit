@@ -18,14 +18,11 @@ local function handleInput(input, gameProcessedEvent)
         if KeyBinds.DoSomething.Toggle then
             -- Toggle do something
             Events.DoSomething:FireServer(not PlayerData.IsDoingSomething)
-        elseif KeyBinds.DoSomething.Toggle == false then
+        else
             -- Start doing something
             if not PlayerData.IsDoingSomething then
                 Events.DoSomething:FireServer(true)
             end
-        else
-            -- Toggle do something
-            Events.DoSomething:FireServer(not PlayerData.IsDoingSomething)
         end
     end
 
@@ -40,7 +37,7 @@ local function handleInputEnded(input, gameProcessedEvent)
     local KeyBinds = DoSomethingInfo.Client.Keybinds
 
     -- Example for handling input ended
-    if input.KeyCode == KeyBinds.DoSomething.KeyCode and KeyBinds.DoSomething.Toggle == false then
+    if input.KeyCode == KeyBinds.DoSomething.KeyCode and not KeyBinds.DoSomething.Toggle then
         -- Stop doing something if it's a hold action
         if PlayerData.IsDoingSomething then
             Events.DoSomething:FireServer(false)
