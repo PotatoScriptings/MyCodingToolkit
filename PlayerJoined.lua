@@ -2,6 +2,10 @@
 local Players = game:GetService("Players")
 local PlayerDatas = require(script:WaitForChild("PlayerData")) -- This module will most likely not exist, at least in this location.
 -- It is used to manage player data in this context.
+local PlayerValues = require(script:WaitForChild("PlayerValues")) -- This module will most likely not exist, at least in this location.
+-- It contains the values the player is give when they join.
+local ValuesModule = require(script:WaitForChild("ValuesModule")) -- This module will most likely not exist, at least in this location.
+-- It is used to give things (like players) values
 
 -- This function calls when player character loads
 local function onCharacterAdded(character)
@@ -26,6 +30,9 @@ local function onPlayerJoined(player)
 
     -- Create player data for the new player
     local playerData = PlayerDatas.new(player.UserId)
+
+    -- Creates values for the player
+    local Values = ValuesModule.GiveValues(PlayerValues)
 
     -- Additional setup can be done here
 end
