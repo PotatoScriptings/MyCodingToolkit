@@ -32,7 +32,7 @@ local function onPlayerJoined(player)
     local playerData = PlayerDatas.new(player.UserId)
 
     -- Creates values for the player
-    local Values = ValuesModule.GiveValues(PlayerValues)
+    local Values = ValuesModule.GiveValues(player, PlayerValues)
 
     -- Additional setup can be done here
 end
