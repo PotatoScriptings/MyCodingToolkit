@@ -4,6 +4,8 @@
     Purpose: This class is used for...
 ]]
 
+-- Variables
+
 -- Creates class (rename)
 local newClass = {}
 newClass.__index = newClass

@@ -1,5 +1,38 @@
 --[[
     Date of creation: DD/MM/YYYY (DD/MM/YYYY)
     Author: Potato
-    Purpose: This class is used for...
+    Purpose: This ECS module handles...
 ]]
+
+-- Variables
+local entityIndex = 0
+
+local ECSModule = {}
+
+-- Creates components
+local components = {
+    -- eg. ["speed"] = {}
+}
+
+-- Function to create new entity
+function ECSModule.createEntity() : number
+    entityIndex += 1
+    local id = entityIndex
+    return id
+end
+
+-- Function to set a component
+function ECSModule.setComponent(id : number, componentName : string, value : any)
+    local currentComponent = components[componentName]
+
+    currentComponent[id] = value
+end
+
+-- Add system here
+-- eg. function accelerateCars()
+--     for id, _ in components["speed"] do
+--         components["speed"][id] += 25
+--     end
+-- end
+
+return ECSModule
