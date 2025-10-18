@@ -5,6 +5,14 @@
 ]]
 
 -- Variables
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local modules = ReplicatedStorage.Modules
+local infoModules = modules.InfoModules
+local utilityModules = modules.UtilityModules
+
+-- eg. local ExampleModule = require(utilityModules.ExampleModule)
+
 local entityIndex = 0
 
 local ECSModule = {}
@@ -15,14 +23,14 @@ local components = {
 }
 
 -- Function to create new entity
-function ECSModule.createEntity() : number
+local function createEntity() : number
     entityIndex += 1
     local id = entityIndex
     return id
 end
 
 -- Function to set a component
-function ECSModule.setComponent(id : number, componentName : string, value : any)
+local function setComponent(id : number, componentName : string, value : any)
     local currentComponent = components[componentName]
 
     currentComponent[id] = value
